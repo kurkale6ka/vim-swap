@@ -1,1 +1,1 @@
-Easy swapping of text
+= Easy swapping of text in Vim
