@@ -1,1 +1,2 @@
-= Easy swapping of text in Vim
+= Swapping of text in Vim
+A plugin which makes swapping of text in Vim easier
