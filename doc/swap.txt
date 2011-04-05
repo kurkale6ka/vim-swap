@@ -12,7 +12,7 @@
 
 
 Latest version at:
-http://github.com/kurkale6ka/vimfiles/blob/master/doc/swap.txt
+https://github.com/kurkale6ka/vim-swap
 
 
 
