@@ -5,7 +5,7 @@ A plugin which makes swapping of text in Vim easier
 
 <h2>1. Visual mode</h2>
 
-<h3>1.1 `\x`</h3>
+<h3>1.1</h3> `\x`
 
 First select some text (`[]` represents the highlighted area). Then press `\x`
 
@@ -16,7 +16,7 @@ First select some text (`[]` represents the highlighted area). Then press `\x`
 
 _Note:_ Your selection can be loose and include white spaces at both ends.
 
-<h3>1.2 `\\x`</h3>
+<h3>1.2</h3> `\\x`
 
 By default the plugin acts on comparison operators  
 You are however allowed to specify any pivot for the swapping.
