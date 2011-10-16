@@ -4,8 +4,9 @@ Swapping of text in Vim
 A plugin which makes swapping of text in Vim easier
 
 1. Visual mode
+--------------
 
-1.1 \x
+1.1 `\x`
 
 First select some text (`[]` represents the highlighted area). Then press `\x`
 
@@ -16,7 +17,7 @@ First select some text (`[]` represents the highlighted area). Then press `\x`
 
 _Note:_ Your selection can be loose and include white spaces at both ends.
 
-1.2 \\x
+1.2 `\\x`
 
 By default the plugin acts on comparison operators  
 You are however allowed to specify any pivot for the swapping.
@@ -42,12 +43,13 @@ You can also use `V`, `v` or `^v` to select several lines (`v` used), then press
     unknown !~ user
     1!=#0
 
-================================================================================
+---
 2. Normal mode
+--------------
 
 Swap with WORD on the right `\x`
 
-# indicates the cursor position in the examples below.
+`#` indicates the cursor position in the examples below.
 
           #
     zero one      a_longer_word three
@@ -71,8 +73,9 @@ use **. (dot)** to repeat any normal mode (for now) swap mapping you just used!
 
 For more information see: http://github.com/tpope/vim-repeat
 
-================================================================================
+---
 3. Supported operators
+----------------------
 
 Comparison operators
     ===    !==     <>    ==#    !=#     >#
@@ -109,8 +112,9 @@ You can define your own operators by putting a similar line in your _vimrc_:
 
     let g:swap_custom_ops = ['first_operator', 'second_operator', ...]
 
-================================================================================
+---
 4. Custom mappings
+------------------
 
 You have the possibility to define your own custom mappings in your _vimrc_:
 
