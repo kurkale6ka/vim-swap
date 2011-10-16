@@ -96,10 +96,12 @@ _Bitwise operators_
     <<     >>
 
 _Misc operators_  
+    <code>
     >      <       =      +      -      *
     /      %       &      |      ^      .
     ?      :       ,     '=     '<     '>
     !<     !>
+    </code>
 
 **3.1 Custom operators**
 
