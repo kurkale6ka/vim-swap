@@ -5,7 +5,7 @@ A plugin which makes swapping of text in Vim easier
 
 <h2>1. Visual mode</h2>
 
-**1.1 `\x`**
+<h3>1.1 `\x`</h3>
 
 First select some text (`[]` represents the highlighted area). Then press `\x`
 
@@ -16,7 +16,7 @@ First select some text (`[]` represents the highlighted area). Then press `\x`
 
 _Note:_ Your selection can be loose and include white spaces at both ends.
 
-**1.2 `\\x`**
+<h3>1.2 `\\x`</h3>
 
 By default the plugin acts on comparison operators  
 You are however allowed to specify any pivot for the swapping.
@@ -29,7 +29,7 @@ You will be asked to give a pattern (`%` used here)
                       V
     a percentage as a pivot  %  Just testing
 
-**1.3 Multiple lines**
+<h3>1.3 Multiple lines</h3>
 
 You can also use `V`, `v` or `^v` to select several lines (`v` used), then press `\x`
 
@@ -63,7 +63,7 @@ Swap with WORD on the left  `\X`
     zero one two     let's
     three have some more fun
 
-**2.1 Repeat**
+<h3>2.1 Repeat</h3>
 
 This plugin integrates with Tim Pope's repeat plugin. It means that you can  
 use **. (dot)** to repeat any normal mode (for now) swap mapping you just used!
@@ -107,7 +107,7 @@ _Misc operators_
 !<     !>
 </code>
 
-**3.1 Custom operators**
+<h3>3.1 Custom operators</h3>
 
 You can define your own operators by putting a similar line in your _vimrc_:
 
