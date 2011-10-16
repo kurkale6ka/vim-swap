@@ -73,34 +73,38 @@ For more information see: http://github.com/tpope/vim-repeat
 <h2>3. Supported operators</h2>
 
 _Comparison operators_  
-    ===    !==     <>    ==#    !=#     >#
-    >=#     <#    <=#    =~#    !~#    ==?
-    !=?     >?    >=?     <?    <=?    =~?
-    !~?     ==     !=     >=     =~     <=
-    !~      ~=
+<code>
+===    !==     <>    ==#    !=#     >#
+>=#     <#    <=#    =~#    !~#    ==?
+!=?     >?    >=?     <?    <=?    =~?
+!~?     ==     !=     >=     =~     <=
+!~      ~=
+</code>
 
 _Logical operators_  
-    &&     ||
+<code>&&     ||</code>
 
 _Assignment operators_  
-    +=     -=     *=     /=     %=     &=
-    |=     ^=    <<=    >>=
+<code>
++=     -=     *=     /=     %=     &=
+|=     ^=    <<=    >>=
+</code>
 
 _Scope operators_  
-    ::
+<code>::</code>
 
 _Pointer operators_  
-    ->*     ->     .*
+<code>->*     ->     .*</code>
 
 _Bitwise operators_  
-    <<     >>
+<code><<     >></code>
 
 _Misc operators_  
 <code>
-`>`      <       =      +      -      *
-`/`      %       &      |      ^      .
-`?`      :       ,     '=     '<     '>
-`!<`     !>
+>      <       =      +      -      *
+/      %       &      |      ^      .
+?      :       ,     '=     '<     '>
+!<     !>
 </code>
 
 **3.1 Custom operators**
