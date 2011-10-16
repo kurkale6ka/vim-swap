@@ -42,7 +42,6 @@ You can also use `V`, `v` or `^v` to select several lines (`v` used), then press
     unknown !~ user
     1!=#0
 
----
 <h2>2. Normal mode</h2>
 
 Swap with WORD on the right `\x`
@@ -71,7 +70,6 @@ use **. (dot)** to repeat any normal mode (for now) swap mapping you just used!
 
 For more information see: http://github.com/tpope/vim-repeat
 
----
 <h2>3. Supported operators</h2>
 
 Comparison operators
@@ -98,10 +96,12 @@ Bitwise operators
     <<     >>
 
 Misc operators
+    <code>
     >      <       =      +      -      *
     /      %       &      |      ^      .
     ?      :       ,     '=     '<     '>
     !<     !>
+    </code>
 
 3.1 Custom operators
 
@@ -109,7 +109,6 @@ You can define your own operators by putting a similar line in your _vimrc_:
 
     let g:swap_custom_ops = ['first_operator', 'second_operator', ...]
 
----
 <h2>4. Custom mappings</h2>
 
 You have the possibility to define your own custom mappings in your _vimrc_:
@@ -119,4 +118,4 @@ You have the possibility to define your own custom mappings in your _vimrc_:
     nmap <leader>x         <plug>SwapSwapWithR_WORD
     nmap <leader>X         <plug>SwapSwapWithL_WORD
 
-_Note:_ You can replace \x, \\x, \X with whatever you like.
+_Note:_ You can replace `\x`, `\\x`, `\X` with whatever you like.
