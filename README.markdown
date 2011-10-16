@@ -3,8 +3,7 @@ Swapping of text in Vim
 
 A plugin which makes swapping of text in Vim easier
 
-1. Visual mode
---------------
+<h2>1. Visual mode</h2>
 
 1.1 `\x`
 
@@ -44,8 +43,7 @@ You can also use `V`, `v` or `^v` to select several lines (`v` used), then press
     1!=#0
 
 ---
-2. Normal mode
---------------
+<h2>2. Normal mode</h2>
 
 Swap with WORD on the right `\x`
 
@@ -74,8 +72,7 @@ use **. (dot)** to repeat any normal mode (for now) swap mapping you just used!
 For more information see: http://github.com/tpope/vim-repeat
 
 ---
-3. Supported operators
-----------------------
+<h2>3. Supported operators</h2>
 
 Comparison operators
     ===    !==     <>    ==#    !=#     >#
@@ -113,8 +110,7 @@ You can define your own operators by putting a similar line in your _vimrc_:
     let g:swap_custom_ops = ['first_operator', 'second_operator', ...]
 
 ---
-4. Custom mappings
-------------------
+<h2>4. Custom mappings</h2>
 
 You have the possibility to define your own custom mappings in your _vimrc_:
 
