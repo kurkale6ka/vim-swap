@@ -5,7 +5,7 @@ A plugin which makes swapping of text in Vim easier
 
 <h2>1. Visual mode</h2>
 
-1.1 `\x`
+**1.1 `\x`**
 
 First select some text (`[]` represents the highlighted area). Then press `\x`
 
@@ -16,7 +16,7 @@ First select some text (`[]` represents the highlighted area). Then press `\x`
 
 _Note:_ Your selection can be loose and include white spaces at both ends.
 
-1.2 `\\x`
+**1.2 `\\x`**
 
 By default the plugin acts on comparison operators  
 You are however allowed to specify any pivot for the swapping.
@@ -29,7 +29,7 @@ You will be asked to give a pattern (`%` used here)
                       V
     a percentage as a pivot  %  Just testing
 
-1.3 Multiple lines
+**1.3 Multiple lines**
 
 You can also use `V`, `v` or `^v` to select several lines (`v` used), then press `\x`
 
@@ -63,7 +63,7 @@ Swap with WORD on the left  `\X`
     zero one two     let's
     three have some more fun
 
-2.1 Repeat
+**2.1 Repeat**
 
 This plugin integrates with Tim Pope's repeat plugin. It means that you can  
 use **. (dot)** to repeat any normal mode (for now) swap mapping you just used!
@@ -73,37 +73,41 @@ For more information see: http://github.com/tpope/vim-repeat
 <h2>3. Supported operators</h2>
 
 Comparison operators
-    ===    !==     <>    ==#    !=#     >#
-    >=#     <#    <=#    =~#    !~#    ==?
-    !=?     >?    >=?     <?    <=?    =~?
-    !~?     ==     !=     >=     =~     <=
-    !~      ~=
+<code>
+===    !==     <>    ==#    !=#     >#
+>=#     <#    <=#    =~#    !~#    ==?
+!=?     >?    >=?     <?    <=?    =~?
+!~?     ==     !=     >=     =~     <=
+!~      ~=
+</code>
 
 Logical operators
-    &&     ||
+<code>&&     ||</code>
 
 Assignment operators
-    +=     -=     *=     /=     %=     &=
-    |=     ^=    <<=    >>=
+<code>
++=     -=     *=     /=     %=     &=
+|=     ^=    <<=    >>=
+</code>
 
 Scope operators
-    ::
+<code>::</code>
 
 Pointer operators
-    ->*     ->     .*
+<code>->*     ->     .*</code>
 
 Bitwise operators
-    <<     >>
+<code><<     >></code>
 
 Misc operators
-    <code>
-    >      <       =      +      -      *
-    /      %       &      |      ^      .
-    ?      :       ,     '=     '<     '>
-    !<     !>
-    </code>
+<code>
+>      <       =      +      -      *
+/      %       &      |      ^      .
+?      :       ,     '=     '<     '>
+!<     !>
+</code>
 
-3.1 Custom operators
+**3.1 Custom operators**
 
 You can define your own operators by putting a similar line in your _vimrc_:
 
