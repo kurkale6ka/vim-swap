@@ -13,11 +13,8 @@
 if exists('g:loaded_swap') || &compatible || v:version < 700
 
    if &compatible && &verbose
-
       echo "Swap is not designed to work in compatible mode."
-
    elseif v:version < 700
-
       echo "Swap needs Vim 7.0 or above to work correctly."
    endif
 
@@ -123,7 +120,7 @@ function! s:Swap(mode) range
             \'\ze[[:space:]]*\%'     . col_end   . 'c/\3\2\1/e'
       endif
 
-      " Swap Words
+   " Swap Words
    elseif a:mode =~ 'n'
 
       let save_cursor = getpos(".")
