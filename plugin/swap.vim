@@ -138,6 +138,29 @@ function! s:Swap(mode) range
          \ '\([^[:space:]]*\%#[^[:space:]]*\)' .
          \'\(\_[[:space:]]\+\)'                .
          \ '\([^[:space:]]\+\)/\3\2\1/e'
+
+    " Swap Arguments
+   elseif a:mode =~ 'a'
+
+      let save_cursor = getpos(".")
+
+      " swap with Word on the left
+      if 'al' == a:mode
+
+         call search('[,(]', 'bWe')
+      endif
+
+      " search back to beginning of current argument or argument list
+      call search('[,(]', 'bWe')
+      norm w
+
+      " swap with Word on the right
+      execute 'silent substitute/'        .
+         \'\(\%#[^,)]*\)'                 .
+         \',\([[:space:]]*\)'             .
+         \'\([^,)]\+\)\([,)]\)'           .
+         \'/\3,\2\1\4/e'
+
    endif
 
    " Repeat
@@ -167,11 +190,15 @@ endfunction
 
 xmap <silent> <plug>SwapSwapOperands      :     call <sid>Swap('v' )<cr>
 xmap <silent> <plug>SwapSwapPivotOperands :     call <sid>Swap('vi')<cr>
+nmap <silent> <plug>SwapSwapArgumentsR    :     call <sid>Swap('a' )<cr>
+nmap <silent> <plug>SwapSwapArgumentsL    :     call <sid>Swap('al' )<cr>
 nmap <silent> <plug>SwapSwapWithR_WORD    :<c-u>call <sid>Swap('nr')<cr>
 nmap <silent> <plug>SwapSwapWithL_WORD    :<c-u>call <sid>Swap('nl')<cr>
 
 xmap <leader>x  <plug>SwapSwapOperands
 xmap <leader>cx <plug>SwapSwapPivotOperands
+nmap <leader>l  <plug>SwapSwapArgumentsR
+nmap <leader>h  <plug>SwapSwapArgumentsL
 nmap <leader>x  <plug>SwapSwapWithR_WORD
 nmap <leader>X  <plug>SwapSwapWithL_WORD
 

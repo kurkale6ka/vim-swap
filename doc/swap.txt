@@ -8,6 +8,10 @@
                                    kurkale6ka
                                 mitkofr@yahoo.fr
 
+                       Argument Swapping By Vincent Breitmoser
+                                     Valodim
+                             valodim@mugenguild.com
+
                                 Reference Manual~
 
 
@@ -93,6 +97,25 @@ loading this plugin by setting the swap global variable in your |vimrc| file:
     zero one two     let's
     three have some more fun
 <
+    Swap ARGUMENT to the left  \h~
+>
+    int dostuff(int a, char b, long c)
+           |             #
+           V
+    int dostuff(char b, int a, long c)
+<
+
+    Swap ARGUMENT to the right  \l~
+>
+    int dostuff(int a, char b, long c)
+           |             #
+           V
+    int dostuff(int a, long c, char b)
+<
+
+Arguments are delimited by either parantheses or commata, and seperated by a
+single comma.
+
 2.1 Repeat                                                          *swap-repeat*
 
     This plugin integrates with Tim Pope's repeat plugin. It means that you can
@@ -147,6 +170,8 @@ You have the possibility to define your own custom mappings in your |vimrc|:
     vmap <leader><leader>x <plug>SwapSwapPivotOperands
     nmap <leader>x         <plug>SwapSwapWithR_WORD
     nmap <leader>X         <plug>SwapSwapWithL_WORD
+    nmap <leader>h         <plug>SwapSwapArgumentL
+    nmap <leader>l         <plug>SwapSwapArgumentR
 <
 Note: You can replace \x, \\x, \X with whatever you like.
 
