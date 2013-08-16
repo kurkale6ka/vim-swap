@@ -45,12 +45,12 @@ loading this plugin by setting the swap global variable in your |vimrc| file:
 <
     Note: Your selection can be loose and include white spaces at both ends.
 
-    1.2 \\x~
+    1.2 \cx~
 
     By default the plugin acts on comparison operators |comparison_operators|
     You are however allowed to specify any pivot for the swapping.
 
-    First select some text. Then press \\x
+    First select some text. Then press \cx
     You will be asked to give a pattern (% used here)
 >
     Just testing  %  a percentage as a pivot
@@ -143,12 +143,12 @@ loading this plugin by setting the swap global variable in your |vimrc| file:
 
 You have the possibility to define your own custom mappings in your |vimrc|:
 >
-    vmap <leader>x         <plug>SwapSwapOperands
-    vmap <leader><leader>x <plug>SwapSwapPivotOperands
-    nmap <leader>x         <plug>SwapSwapWithR_WORD
-    nmap <leader>X         <plug>SwapSwapWithL_WORD
+    vmap <leader>x  <plug>SwapSwapOperands
+    vmap <leader>cx <plug>SwapSwapPivotOperands
+    nmap <leader>x  <plug>SwapSwapWithR_WORD
+    nmap <leader>X  <plug>SwapSwapWithL_WORD
 <
-Note: You can replace \x, \\x, \X with whatever you like.
+Note: You can replace \x, \cx, \X with whatever you like.
 
 ================================================================================
  vim: textwidth=80 tabstop=8 filetype=help
