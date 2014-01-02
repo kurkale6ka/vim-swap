@@ -1,4 +1,4 @@
-*swap.txt* For Vim version 7                          Last change: 5 October 2010
+*swap.txt* For Vim version 7                          Last change: 2 January 2014
 
 
                              Easy swapping of text~
