@@ -16,12 +16,12 @@ First select some text (`[]` represents the highlighted area). Then press `\x`
 
 _Note:_ Your selection can be loose and include white spaces at both ends.
 
-**1.2 `\\x`**
+**1.2 `\cx`**
 
 By default the plugin acts on comparison operators  
 You are however allowed to specify any pivot for the swapping.
 
-First select some text. Then press `\\x`  
+First select some text. Then press `\cx`  
 You will be asked to give a pattern (`%` used here)
 
     Just testing  %  a percentage as a pivot
@@ -122,4 +122,4 @@ You have the possibility to define your own custom mappings in your _vimrc_:
     nmap <leader>x         <plug>SwapSwapWithR_WORD
     nmap <leader>X         <plug>SwapSwapWithL_WORD
 
-_Note:_ You can replace `\x`, `\\x`, `\X` with whatever you like.
+_Note:_ You can replace `\x`, `\cx`, `\X` with whatever you like.
