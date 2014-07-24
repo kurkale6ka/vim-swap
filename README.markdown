@@ -123,3 +123,4 @@ You have the possibility to define your own custom mappings in your _vimrc_:
     nmap <leader>X         <plug>SwapSwapWithL_WORD
 
 _Note:_ You can replace `\x`, `\cx`, `\X` with whatever you like.
+_Note:_ If you want to disable the default mappings, set 1 to `g:swap_disable_default_mappings`.
