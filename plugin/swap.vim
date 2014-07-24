@@ -31,10 +31,12 @@ xmap <silent> <plug>SwapSwapPivotOperands :     call swap#text('vi')<cr>
 nmap <silent> <plug>SwapSwapWithR_WORD    :<c-u>call swap#text('nr')<cr>
 nmap <silent> <plug>SwapSwapWithL_WORD    :<c-u>call swap#text('nl')<cr>
 
-xmap <leader>x  <plug>SwapSwapOperands
-xmap <leader>cx <plug>SwapSwapPivotOperands
-nmap <leader>x  <plug>SwapSwapWithR_WORD
-nmap <leader>X  <plug>SwapSwapWithL_WORD
+if !get(g:, 'swap_disable_default_mappings', 0)
+  xmap <leader>x  <plug>SwapSwapOperands
+  xmap <leader>cx <plug>SwapSwapPivotOperands
+  nmap <leader>x  <plug>SwapSwapWithR_WORD
+  nmap <leader>X  <plug>SwapSwapWithL_WORD
+endif
 
 let &cpoptions = s:savecpo
 unlet s:savecpo
