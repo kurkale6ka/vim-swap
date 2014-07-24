@@ -133,6 +133,14 @@ function! swap#text(mode) range
       call histdel('search', -1)
    endif
 
-   call setpos('.', save_cursor)
+   if &virtualedit == 'all' && a:mode =~ 'v'
+      " wrong cursor position is better than crash
+      " https://groups.google.com/forum/#!topic/vim_dev/AK_HZ-5TeuU
+      set virtualedit=
+      call setpos('.', save_cursor)
+      set virtualedit=all
+   else
+      call setpos('.', save_cursor)
+   endif
 
 endfunction
