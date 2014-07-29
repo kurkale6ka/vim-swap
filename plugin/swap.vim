@@ -31,10 +31,18 @@ xmap <silent> <plug>SwapSwapPivotOperands :     call swap#text('vi')<cr>
 nmap <silent> <plug>SwapSwapWithR_WORD    :<c-u>call swap#text('nr')<cr>
 nmap <silent> <plug>SwapSwapWithL_WORD    :<c-u>call swap#text('nl')<cr>
 
-xmap <leader>x  <plug>SwapSwapOperands
-xmap <leader>cx <plug>SwapSwapPivotOperands
-nmap <leader>x  <plug>SwapSwapWithR_WORD
-nmap <leader>X  <plug>SwapSwapWithL_WORD
+function! s:map(mode, lhs, rhs)
+
+    if !hasmapto(a:rhs, a:mode)
+        execute a:mode . 'map ' . a:lhs . ' ' . a:rhs
+    endif
+
+endfunction
+
+call s:map('x', '<leader>x', '<plug>SwapSwapOperands')
+call s:map('x', '<leader>cx', '<plug>SwapSwapPivotOperands')
+call s:map('n', '<leader>x', '<plug>SwapSwapWithR_WORD')
+call s:map('n', '<leader>X', '<plug>SwapSwapWithL_WORD')
 
 let &cpoptions = s:savecpo
 unlet s:savecpo
